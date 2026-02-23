@@ -167,5 +167,10 @@ for (let i = 0; i < cards.length; i++) {
   };
 }
 
+for (let i = 0; i < cards.length; i++) {
+  updateBadge(cards[i]);
+}
 
+updateCounts();
+showJobs(activeTab);
 
