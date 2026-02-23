@@ -9,6 +9,7 @@ let tabs = document.querySelectorAll("[data-tab]");
 let activeTab = "all";
 
 
+
 function updateCounts() {
 
   let cards = document.querySelectorAll(".job-card");
@@ -39,8 +40,6 @@ function updateCounts() {
 
 
 
-
-
 function updateBadge(card) {
 
   let badge = card.querySelector(".badge");
@@ -61,7 +60,6 @@ function updateBadge(card) {
     badge.className = "badge badge-error";
   }
 }
-
 
 
 
@@ -106,8 +104,6 @@ function showJobs(type) {
 
 
 
-
-
 for (let i = 0; i < tabs.length; i++) {
 
   tabs[i].onclick = function () {
@@ -122,8 +118,6 @@ for (let i = 0; i < tabs.length; i++) {
     showJobs(activeTab);
   };
 }
-
-
 
 
 
@@ -167,10 +161,11 @@ for (let i = 0; i < cards.length; i++) {
   };
 }
 
+
+
 for (let i = 0; i < cards.length; i++) {
   updateBadge(cards[i]);
 }
 
 updateCounts();
 showJobs(activeTab);
-
